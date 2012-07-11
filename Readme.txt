@@ -3,3 +3,5 @@ Van's Memo thingy is a memo organizer where you can store small pieces of textua
 The application user interface was inspired by Dropbox.
 
 The application is hosted at vanlalhriata.wordpress.com/projects/vans-to-do-list
+
+This application is licensed under the Microsoft Public License (MS-PL).
