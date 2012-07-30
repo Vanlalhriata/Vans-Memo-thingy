@@ -38,13 +38,18 @@ namespace VanToDo
 
         private void DescriptionTextBox_KeyDown(object sender, KeyEventArgs e)
         {
-            if (Keyboard.IsKeyDown(Key.LeftShift) || Keyboard.IsKeyDown(Key.RightShift))
-                if (Keyboard.IsKeyDown(Key.Enter))
+            if (Keyboard.IsKeyDown(Key.Enter))
+                if (Keyboard.IsKeyDown(Key.LeftShift) || Keyboard.IsKeyDown(Key.RightShift))
+                {
+                    //e.Handled = true;
+                    //int savedIndex = DescriptionTextBox.CaretIndex;
+                    //DescriptionTextBox.Text = DescriptionTextBox.Text.Insert(DescriptionTextBox.CaretIndex, "\r");
+                    //DescriptionTextBox.CaretIndex = savedIndex + 1;
+                }
+                else
                 {
                     e.Handled = true;
-                    int savedIndex = DescriptionTextBox.CaretIndex;
-                    DescriptionTextBox.Text = DescriptionTextBox.Text.Insert(DescriptionTextBox.CaretIndex, "\r");
-                    DescriptionTextBox.CaretIndex = savedIndex + 1;
+                    this.DialogResult = true;
                 }
         }
     }

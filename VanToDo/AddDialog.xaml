@@ -46,7 +46,10 @@
                      Width="450" Height="140" Margin="5"
                      VerticalContentAlignment="Top"
                      TextWrapping="WrapWithOverflow"
-                     KeyDown="DescriptionTextBox_KeyDown"/>
+                     
+                     PreviewKeyDown="DescriptionTextBox_KeyDown"
+                     AcceptsReturn="True"/>
+            <!--KeyDown="DescriptionTextBox_KeyDown"-->
 
             <Label Content="New line = Shift + Enter" Style="{StaticResource MinimalLabel}"
                    FontSize="12"
